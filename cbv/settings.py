@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-g77d4ypk34!11%7na9zrb-rz#t@f6ed)+jgu9ux%mu@7afoehu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cadastro',
     'usuario',
-    'obra',
+    'obra'
 ]
 
 MIDDLEWARE = [
@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'cbv.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'rLuXeCqJJPuKaybKxHvtKqmTmseSaBfK',
+        'HOST': 'rLuXeCqJJPuKaybKxHvtKqmTmseSaBfK',
+        'PORT':'5432',
     }
 }
 
